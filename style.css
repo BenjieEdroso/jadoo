@@ -38,6 +38,7 @@ a {
   color: var(--black);
 }
  
+
 /* global-end */
 
 /* navigation-start*/
@@ -50,7 +51,7 @@ a {
     outline: none;
     background-color: white;
     padding: 0.6rem ;
-    border:none;
+    border:none; 
     border-radius: 5px;
 }
 .navlinks{
@@ -59,7 +60,38 @@ a {
 /* navigation-end */
 
 /* hero-start */
+.hero-subtitle{
+  color: #DF6951;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+}
 
+.hero-title{
+  color: #181E4B;
+  font-family: volkhov-bold;
+  font-size: 58px;
+  margin: 43px 25px 29px 25px;
+  overflow-x: hidden;
+}
+
+.hero-intro{
+  font-size: medium;
+  color: #5E6282;
+  margin: 0 25px;
+  line-height: 30px;
+}
+
+.find-btn{
+  font-size: 18px;
+  font-weight: medium;
+  outline: none;
+  border: none;
+  background: #F1A501;
+  border-radius: 10px;
+  color: white;
+  padding: 19px 27px;
+}
 /* hero-end */
 
 /* decorations-start */
@@ -68,5 +100,19 @@ a {
     top: 0;
     right: -100%;
     z-index: -1;
+}
+.decore2{
+   display: inline-block;
+   position: relative;
+
+}
+.decore2::after{
+  content: url("./img/decore2.png");
+  clear: both;
+  display: inline-block;
+  position: absolute;
+  left: -24px;
+  bottom: -10px;
+  z-index: -1;
 }
 /* decorations-end */
