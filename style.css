@@ -1,0 +1,72 @@
+/* global-start */
+@font-face{
+    font-family: google-sans-medium;
+    src: url("./fonts/ProductSans-Medium.woff")
+}
+
+@font-face {
+    font-family: volkhov-bold;
+    src: url("./fonts/Volkhov-Bold.ttf");
+}
+:root{
+    --black: #212832,
+    --yellow: #F1A501,
+    --peach: #DF6951,
+    --blue: #181E4B,
+    --light-violet: #5E6282
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  text-rendering: optimizeLegibility;
+  font-size: 1rem;
+  font-family: google-sans-medium;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: var(--black);
+}
+ 
+/* global-end */
+
+/* navigation-start*/
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    margin: 1.68em;
+}
+.mobile-nav{
+    outline: none;
+    background-color: white;
+    padding: 0.6rem ;
+    border:none;
+    border-radius: 5px;
+}
+.navlinks{
+    display: none;
+}
+/* navigation-end */
+
+/* hero-start */
+
+/* hero-end */
+
+/* decorations-start */
+.decore1{
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: -1;
+}
+/* decorations-end */
