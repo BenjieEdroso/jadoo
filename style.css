@@ -5,8 +5,8 @@
 }
 
 @font-face {
-    font-family: volkhov-bold;
-    src: url("./fonts/Volkhov-Bold.ttf");
+    font-family: volkhovBold;
+    src: url("./fonts/Volkhov-Bold.woff");
 }
 :root{
     --black: #212832,
@@ -45,7 +45,7 @@ a {
 .navbar{
     display: flex;
     justify-content: space-between;
-    margin: 1.68em;
+    padding: 1.68em;
 }
 .mobile-nav{
     outline: none;
@@ -60,6 +60,15 @@ a {
 /* navigation-end */
 
 /* hero-start */
+.head{
+  position: relative;
+  overflow-x: hidden;
+}
+
+.hero{
+  margin-bottom: 176px;
+}
+
 .hero-subtitle{
   color: #DF6951;
   text-transform: uppercase;
@@ -69,7 +78,7 @@ a {
 
 .hero-title{
   color: #181E4B;
-  font-family: volkhov-bold;
+  font-family: volkhovBold;
   font-size: 58px;
   margin: 43px 25px 29px 25px;
   overflow-x: hidden;
@@ -81,7 +90,11 @@ a {
   margin: 0 25px;
   line-height: 30px;
 }
-
+.hero-btns{
+  display: flex;
+  justify-content: space-between;
+  margin: 29px 25px 0px 25px;
+}
 .find-btn{
   font-size: 18px;
   font-weight: medium;
@@ -91,12 +104,33 @@ a {
   border-radius: 10px;
   color: white;
   padding: 19px 27px;
+   box-shadow: 0px 20px 35px rgb(241, 165, 1, 15%);
+
+}
+
+.demo-btn{
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  outline: none;
+  color: #686D77;
+  font-weight: medium;
+  font-size: 17px;
+}
+
+.peach-btn{
+  border-radius: 100%;
+  background: #DF6951;
+  padding: 20px;
+  margin-right: 21px;
+  box-shadow: 0px 15px 30px rgb(223, 105, 81, 30%);
 }
 /* hero-end */
 
 /* decorations-start */
 .decore1{
-    position: fixed;
+    position: absolute;
     top: 0;
     right: -100%;
     z-index: -1;
@@ -104,7 +138,6 @@ a {
 .decore2{
    display: inline-block;
    position: relative;
-
 }
 .decore2::after{
   content: url("./img/decore2.png");
@@ -115,4 +148,82 @@ a {
   bottom: -10px;
   z-index: -1;
 }
+
+.decore4{
+  position: absolute;
+  top: 100;
+  right: 0;
+}
 /* decorations-end */
+
+/* category-start */
+.category{
+   position: relative;
+}
+.services{
+  margin-top: 61px;
+    row-gap: 69px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+   
+}
+.section-title{
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #5E6282;
+  text-align: center;
+}
+.category-title{
+  font-family: volkhob-bold;
+  font-size: 35px;
+  color: #14183E;
+  text-align:center;
+}
+.card{
+  width: 267px;
+  height: 314px;
+  border-radius: 36px;
+  background: white;
+  padding: 7px 43px 45px 43px;
+  position: relative;
+  transition: all ease-in-out 200ms;
+}
+.card div{
+  font-size: 20px;
+  font-weight: medium;
+  color: #1E1D4C;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.card p {
+  font-weight: medium;
+  text-align: center;
+  color: #5E6282;
+  max-width: 150px;
+  margin: 0 auto;
+  line-height: 26px;
+
+}
+
+.card-img{
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 29px;
+}
+
+.card:hover{
+  box-shadow: 0px 100px 80px rgba(0, 0, 0, 10%);
+}
+
+.card:hover::after{
+  content: url("./img/decore3.png");
+  clear: both;
+  opacity: 1;
+  position: absolute;
+  z-index: -1;
+  left: -35px;
+  bottom: -33px;
+}
+/* category-end */
