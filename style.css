@@ -154,6 +154,13 @@ a {
   top: 100;
   right: 0;
 }
+
+.decore5{
+  position: absolute;
+  bottom: 10%;
+  right: -15%;
+  z-index: -1;
+}
 /* decorations-end */
 
 /* category-start */
@@ -161,20 +168,19 @@ a {
    position: relative;
 }
 .services{
-  margin-top: 61px;
+    margin-top: 61px;
     row-gap: 69px;
     align-items: center;
     display: flex;
     flex-direction: column;
-   
 }
-.section-title{
+.section-subtitle{
   font-size: 18px;
   text-transform: uppercase;
   color: #5E6282;
   text-align: center;
 }
-.category-title{
+.section-title{
   font-family: volkhob-bold;
   font-size: 35px;
   color: #14183E;
@@ -198,7 +204,7 @@ a {
 }
 
 .card p {
-  font-weight: medium;
+  
   text-align: center;
   color: #5E6282;
   max-width: 150px;
@@ -227,3 +233,62 @@ a {
   bottom: -33px;
 }
 /* category-end */
+
+/* destinations-start */
+.img-card{
+  position: relative;
+  z-index: 3;
+  width: 315px;
+  height: 457px;
+  background: white;
+  box-shadow: 0px 100px 80px rgba(0, 0, 0, 10%);
+  border-radius: 24px;
+}
+
+.section-des-title{
+  margin-top: 16px;
+}
+
+.img-des{
+  width: 100%;
+  height: 327px;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+
+.des-cards{
+  margin-top: 66px;
+  display: flex;
+   background: white;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 66px;
+}
+
+.des-title{
+  color: #5E6282;
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+    margin-bottom: 19px;
+}
+.des-cont{
+  position: relative;
+  padding: 28px 25px 42px 25px;
+}
+.des-subtitle{
+  display: flex;
+  align-items: center;
+  color: #5E6282;
+}
+
+.des-subtitle img{
+  margin-right: 14px;
+}
+
+.last-des{
+  position: relative;
+  z-index: 4;
+}
+/* destinations-end */
