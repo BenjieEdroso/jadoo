@@ -1,20 +1,19 @@
 /* global-start */
-@font-face{
-    font-family: google-sans-medium;
-    src: url("./fonts/ProductSans-Medium.woff")
+@font-face {
+  font-family: google-sans-medium;
+  src: url("./fonts/ProductSans-Medium.woff");
 }
 
 @font-face {
-    font-family: volkhovBold;
-    src: url("./fonts/Volkhov-Bold.woff");
+  font-family: volkhovBold;
+  src: url("./fonts/Volkhov-Bold.woff");
 }
-:root{
-    --black: #212832,
-    --yellow: #F1A501,
-    --peach: #DF6951,
-    --blue: #181E4B,
-    --light-violet: #5E6282
-
+:root {
+  --black: #212832;
+  --yellow: #f1a501;
+  --peach: #df6951;
+  --blue: #181e4b;
+  --light-violet: #5e6282;
 }
 
 * {
@@ -37,91 +36,88 @@ a {
   text-decoration: none;
   color: var(--black);
 }
- 
 
 /* global-end */
 
 /* navigation-start*/
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    padding: 1.68em;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.68em;
 }
-.mobile-nav{
-    outline: none;
-    background-color: white;
-    padding: 0.6rem ;
-    border:none; 
-    border-radius: 5px;
+.mobile-nav {
+  outline: none;
+  background-color: white;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 5px;
 }
-.navlinks{
-    display: none;
+.navlinks {
+  display: none;
 }
 /* navigation-end */
 
 /* hero-start */
-.head{
+.head {
   position: relative;
   overflow-x: hidden;
 }
 
-.hero{
+.hero {
   margin-bottom: 176px;
 }
 
-.hero-subtitle{
-  color: #DF6951;
+.hero-subtitle {
+  color: #df6951;
   text-transform: uppercase;
   text-align: center;
   font-weight: bold;
 }
 
-.hero-title{
-  color: #181E4B;
+.hero-title {
+  color: #181e4b;
   font-family: volkhovBold;
   font-size: 58px;
   margin: 43px 25px 29px 25px;
-  overflow-x: hidden;
 }
 
-.hero-intro{
+.hero-intro {
   font-size: medium;
-  color: #5E6282;
+  color: #5e6282;
   margin: 0 25px;
   line-height: 30px;
 }
-.hero-btns{
+.hero-btns {
   display: flex;
   justify-content: space-between;
   margin: 29px 25px 0px 25px;
 }
-.find-btn{
+.find-btn {
   font-size: 18px;
   font-weight: medium;
   outline: none;
   border: none;
-  background: #F1A501;
+  background: #f1a501;
   border-radius: 10px;
   color: white;
   padding: 19px 27px;
-   box-shadow: 0px 20px 35px rgb(241, 165, 1, 15%);
-
+  box-shadow: 0px 20px 35px rgb(241, 165, 1, 15%);
 }
 
-.demo-btn{
+.demo-btn {
   display: flex;
   align-items: center;
   background: none;
   border: none;
   outline: none;
-  color: #686D77;
+  color: #686d77;
   font-weight: medium;
   font-size: 17px;
 }
 
-.peach-btn{
+.peach-btn {
   border-radius: 100%;
-  background: #DF6951;
+  background: #df6951;
   padding: 20px;
   margin-right: 21px;
   box-shadow: 0px 15px 30px rgb(223, 105, 81, 30%);
@@ -129,17 +125,17 @@ a {
 /* hero-end */
 
 /* decorations-start */
-.decore1{
-    position: absolute;
-    top: 0;
-    right: -100%;
-    z-index: -1;
+.decore1 {
+  position: absolute;
+  top: 0;
+  right: -100%;
+  z-index: -1;
 }
-.decore2{
-   display: inline-block;
-   position: relative;
+.decore2 {
+  display: inline-block;
+  position: relative;
 }
-.decore2::after{
+.decore2::after {
   content: url("./img/decore2.png");
   clear: both;
   display: inline-block;
@@ -149,13 +145,13 @@ a {
   z-index: -1;
 }
 
-.decore4{
+.decore4 {
   position: absolute;
   top: 100;
   right: 0;
 }
 
-.decore5{
+.decore5 {
   position: absolute;
   bottom: 10%;
   right: -15%;
@@ -164,29 +160,29 @@ a {
 /* decorations-end */
 
 /* category-start */
-.category{
-   position: relative;
+.category {
+  position: relative;
 }
-.services{
-    margin-top: 61px;
-    row-gap: 69px;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
+.services {
+  margin-top: 61px;
+  row-gap: 69px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
-.section-subtitle{
+.section-subtitle {
   font-size: 18px;
   text-transform: uppercase;
-  color: #5E6282;
+  color: #5e6282;
   text-align: center;
 }
-.section-title{
+.section-title {
   font-family: volkhob-bold;
   font-size: 35px;
-  color: #14183E;
-  text-align:center;
+  color: #14183e;
+  text-align: center;
 }
-.card{
+.card {
   width: 267px;
   height: 314px;
   border-radius: 36px;
@@ -195,35 +191,33 @@ a {
   position: relative;
   transition: all ease-in-out 200ms;
 }
-.card div{
+.card div {
   font-size: 20px;
   font-weight: medium;
-  color: #1E1D4C;
+  color: #1e1d4c;
   text-align: center;
   margin-bottom: 15px;
 }
 
 .card p {
-  
   text-align: center;
-  color: #5E6282;
+  color: #5e6282;
   max-width: 150px;
   margin: 0 auto;
   line-height: 26px;
-
 }
 
-.card-img{
+.card-img {
   display: block;
   margin: 0 auto;
   margin-bottom: 29px;
 }
 
-.card:hover{
+.card:hover {
   box-shadow: 0px 100px 80px rgba(0, 0, 0, 10%);
 }
 
-.card:hover::after{
+.card:hover::after {
   content: url("./img/decore3.png");
   clear: both;
   opacity: 1;
@@ -235,7 +229,7 @@ a {
 /* category-end */
 
 /* destinations-start */
-.img-card{
+.img-card {
   position: relative;
   z-index: 3;
   width: 315px;
@@ -245,11 +239,11 @@ a {
   border-radius: 24px;
 }
 
-.section-des-title{
+.section-des-title {
   margin-top: 16px;
 }
 
-.img-des{
+.img-des {
   width: 100%;
   height: 327px;
   object-fit: cover;
@@ -257,38 +251,181 @@ a {
   display: block;
 }
 
-.des-cards{
+.des-cards {
   margin-top: 66px;
   display: flex;
-   background: white;
+  background: white;
   flex-direction: column;
   align-items: center;
   row-gap: 66px;
 }
 
-.des-title{
-  color: #5E6282;
+.des-title {
+  color: #5e6282;
   display: flex;
   justify-content: space-between;
   font-size: 18px;
-    margin-bottom: 19px;
+  margin-bottom: 19px;
 }
-.des-cont{
+.des-cont {
   position: relative;
   padding: 28px 25px 42px 25px;
 }
-.des-subtitle{
+.des-subtitle {
   display: flex;
   align-items: center;
-  color: #5E6282;
+  color: #5e6282;
 }
 
-.des-subtitle img{
+.des-subtitle img {
   margin-right: 14px;
 }
 
-.last-des{
+.last-des {
   position: relative;
   z-index: 4;
 }
 /* destinations-end */
+
+/* booking-start */
+
+.booking {
+  margin-top: 66px;
+}
+
+.booking-card {
+  position: relative;
+  width: 100vw;
+  height: 459px;
+}
+
+.mobile-booking {
+  position: absolute;
+  top: -130px;
+}
+
+.icon {
+  width: 47px;
+  height: 48px;
+}
+.booking-des {
+  padding: 0 25px;
+  flex-direction: column;
+}
+.des-icon {
+  width: fit-content;
+  margin-top: 66px;
+  display: flex;
+  column-gap: 21px;
+}
+
+.des-1 {
+  font-weight: bold;
+  color: #5e6282;
+}
+
+.des-container {
+  color: var(--light-violet);
+}
+
+/* booking-end */
+
+/* testimonials-start */
+.testimonials {
+  margin-top: 111px;
+}
+
+.tes-title {
+  padding: 50px;
+}
+.testimonials-slider {
+  position: relative;
+  width: 100%;
+  height: 357px;
+}
+.testi-container {
+  position: inherit;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 383px;
+  height: 279px;
+}
+
+.testi-img {
+  position: absolute;
+  top: -15px;
+  left: -40px;
+}
+
+.testi-card {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 300px;
+  z-index: -1;
+  padding: 28px;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0px 100px 80px rgba(0, 0, 0, 10%);
+  color: var(--light-violet);
+}
+.testi-img-disabled {
+  opacity: 0;
+}
+.testi-container-disabled {
+  position: absolute;
+  top: 70px;
+  z-index: -1;
+  left: 235px;
+}
+.testi-card-disabled {
+  box-shadow: none;
+  background: none;
+  border: 2px solid #f0f0f0;
+}
+
+.testi-card-name {
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.slider-buttons {
+  position: absolute;
+  right: 12.5px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  row-gap: 58px;
+}
+
+.prev,
+.next {
+  background: none;
+  outline: none;
+  border: none;
+  padding: 8px;
+}
+.slider-pager {
+  width: fit-content;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.pager {
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  background: #e5e5e5;
+  margin-right: 25px;
+}
+
+.pager:first-of-type {
+  background: var(--blue);
+}
+.pager:last-of-type {
+  margin: 0;
+}
+/* testimonials-end */
