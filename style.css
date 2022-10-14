@@ -428,4 +428,36 @@ a {
 .pager:last-of-type {
   margin: 0;
 }
+
+.sponsors {
+  margin-top: 95px;
+  padding: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 40px;
+  justify-content: space-evenly;
+}
+.sponsor {
+  width: fit-content;
+  height: 86px;
+  display: flex;
+  align-items: center;
+}
+
+.sponsor img {
+  width: fit-content;
+  height: fit-content;
+  filter: grayscale(1);
+}
+
+.sponsor:hover {
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0px 100px 80px rgba(0, 0, 0, 10%);
+}
+
+.sponsor:hover img {
+  filter: grayscale(0);
+}
+
 /* testimonials-end */
