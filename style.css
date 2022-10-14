@@ -157,6 +157,22 @@ a {
   right: -15%;
   z-index: -1;
 }
+
+.decore7 {
+  position: absolute;
+  right: 0;
+}
+
+.decore8 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.decore9 {
+  position: absolute;
+  right: -13px;
+  top: -15px;
+}
 /* decorations-end */
 
 /* category-start */
@@ -461,3 +477,65 @@ a {
 }
 
 /* testimonials-end */
+
+/* newsletter-start */
+
+.newsletter-bg {
+  margin: 0 auto;
+  width: 401px;
+  height: 491px;
+  background: rgba(223, 215, 249, 20%);
+  border-top-left-radius: 129px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  position: relative;
+  padding: 45px 17px 0 17px;
+}
+
+.newsletter-text {
+  font-size: 24px;
+  font-weight: semibold;
+  color: #5e6282;
+  text-align: center;
+  line-height: 54px;
+}
+
+.newsletter-inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+.newsletter-inputs input {
+  padding: 25px 25px 25px 60px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  margin-bottom: 16px;
+}
+
+.newsletter-inputs input::placeholder {
+  color: #39425d;
+}
+
+.newsletter-inputs button {
+  padding: 23px 100px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 17px;
+  color: white;
+  background: linear-gradient(to bottom, #ff946d, #ff7d68);
+}
+
+.input-container {
+  position: relative;
+}
+
+.email-icon {
+  position: absolute;
+  left: 25px;
+  top: 25px;
+}
+/* newsletter-end */
