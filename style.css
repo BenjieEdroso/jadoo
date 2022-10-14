@@ -510,6 +510,7 @@ a {
   padding: 25px 25px 25px 60px;
   border-radius: 10px;
   outline: none;
+  width: 100%;
   border: none;
   margin-bottom: 16px;
 }
