@@ -37,6 +37,11 @@ a {
   color: var(--black);
 }
 
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
 /* global-end */
 
 /* navigation-start*/
@@ -154,7 +159,8 @@ a {
 .decore5 {
   position: absolute;
   bottom: 10%;
-  right: -15%;
+  right: -10%;
+  height: 35%;
   z-index: -1;
 }
 
@@ -318,6 +324,7 @@ a {
 .mobile-booking {
   position: absolute;
   top: -130px;
+  width: 100%;
 }
 
 .icon {
@@ -359,56 +366,62 @@ a {
   width: 100%;
   height: 357px;
 }
-.testi-container {
-  position: inherit;
-  left: 50%;
+
+.testimonials-card {
+  position: absolute;
+  min-width: 280px;
+  max-width: 346px;
+  border-radius: 10px;
+
+  background: #fff;
+  left: 46%;
   transform: translateX(-50%);
-  width: 383px;
-  height: 279px;
+  box-shadow: 0px 100px 80px rgb(0 0 0 / 10%);
+  padding: 45px 16px;
+}
+.testimonial-author,
+.testimonial-addr {
+  color: var(--light-violet);
+  display: block;
 }
 
+.testimonial-author {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.testimonial-addr {
+  font-size: 14px;
+}
+
+.testimonial-user {
+  position: absolute;
+  left: -8%;
+  top: 0;
+}
 .testi-img {
   position: absolute;
   top: -15px;
   left: -40px;
 }
-
-.testi-card {
-  position: absolute;
-  top: 30px;
-  left: 30px;
-  width: 300px;
-  z-index: -1;
-  padding: 28px;
-  border-radius: 10px;
-  background: white;
-  box-shadow: 0px 100px 80px rgba(0, 0, 0, 10%);
+.testimonial-msg {
   color: var(--light-violet);
 }
-.testi-img-disabled {
-  opacity: 0;
-}
-.testi-container-disabled {
-  position: absolute;
-  top: 70px;
-  z-index: -1;
-  left: 235px;
-}
+
 .testi-card-disabled {
   box-shadow: none;
   background: none;
   border: 2px solid #f0f0f0;
-}
-
-.testi-card-name {
-  font-weight: bold;
-  font-size: 18px;
-  margin-top: 10px;
+  padding: 45px 16px 16px 16px;
+  left: 52%;
+  top: 19%;
+  z-index: -1;
 }
 
 .slider-buttons {
   position: absolute;
-  right: 12.5px;
+  right: 20.5px;
   top: 50%;
   transform: translateY(-50%);
   display: flex;
@@ -482,7 +495,7 @@ a {
 
 .newsletter-bg {
   margin: 0 auto;
-  width: 401px;
+  width: 90%;
   height: 491px;
   background: rgba(223, 215, 249, 20%);
   border-top-left-radius: 129px;
