@@ -37,13 +37,16 @@ a {
   color: var(--black);
 }
 
+
+
+
 /* global-end */
 
 /* navigation-start*/
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 1.68em;
+  padding: 1.68em 75px;
 }
 .mobile-nav {
   outline: none;
@@ -64,7 +67,13 @@ a {
 }
 
 .hero {
+  padding: 0 72px;
   margin-bottom: 176px;
+}
+
+.hero-img{
+  width: 417px;
+  height: fit-content;
 }
 
 .hero-subtitle {
@@ -130,6 +139,7 @@ a {
   top: 0;
   right: -100%;
   z-index: -1;
+
 }
 .decore2 {
   display: inline-block;
@@ -185,12 +195,14 @@ a {
   position: absolute;
   bottom: 0;
   right: 0;
+  pointer-events: none;
 }
 /* decorations-end */
 
 /* category-start */
 .category {
   position: relative;
+  margin-bottom: 98px;
 }
 .services {
   margin-top: 61px;
@@ -326,12 +338,16 @@ a {
   position: relative;
   width: 100vw;
   height: 459px;
+ 
 }
 
 .mobile-booking {
   position: absolute;
-  top: -130px;
-  width: 100%;
+  top: -47px;
+  max-width: 100%;
+  min-width: 70%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .icon {
@@ -339,6 +355,7 @@ a {
   height: 48px;
 }
 .booking-des {
+ 
   padding: 0 25px;
   flex-direction: column;
 }
@@ -712,6 +729,7 @@ a {
   background: #000;
   color: #fff;
   position: relative;
+  cursor: pointer;
 }
 
 .store-btn:nth-of-type(1)::after{
@@ -727,5 +745,96 @@ a {
  left: 50%;
  transform: translate(-50%, -50%);
  content: url("./img/applestore.svg");
+
 }
 /* footer-end */
+
+
+/* tablet-start */
+@media screen and (min-width: 768px) and (max-width: 1023px){
+  .mobile-nav{
+    display: block;
+  }
+  .decore1{
+    right: -40%;
+  }
+
+  .hero-img{
+    width: 617px;
+  }
+  
+  .hero-btns{
+    gap: 44px;
+    justify-content: unset;
+  } 
+  .mobile-booking{
+    top: -170px;
+   
+   
+  }
+  .booking-des{
+    margin-top: 50px;
+    align-items: center;
+  }
+
+  .sponsors{
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .decore10{
+    right: 35px;
+  }
+  .footer{
+    padding: 0 35px 86px 35px;
+  }
+}
+/* tablet-end */
+
+@media screen and (min-width: 1024px){
+  .mobile-nav{
+    display: none;
+  }
+
+  .navlinks{
+    display: flex;
+    gap: 27.5px;
+    color: #212832;
+  }
+
+  .navbar{
+    padding: 23.5px 72px 65px 72px;
+  }
+
+  .signup{
+    padding: 9px 22px;
+    border: 1px solid #212832;
+    border-radius: 5px;
+  }
+
+  .decore1{
+    right: -23.5%;
+
+  }
+
+  .hero{
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .hero-subtitle{
+    text-align: unset;
+  }
+
+  .hero-title{
+    margin: 43px 0px 29px 0px;
+  }
+  .hero-intro{
+    margin: 0;
+  }
+  .hero-btns{
+    margin: 29px 0px 0px 0px;
+    gap: 22px;
+    justify-content: unset;
+  }
+}
