@@ -26,6 +26,7 @@ html {
   text-rendering: optimizeLegibility;
   font-size: 1rem;
   font-family: google-sans-medium;
+  overflow-x: hidden;
 }
 
 ul {
@@ -61,10 +62,7 @@ a {
 /* navigation-end */
 
 /* hero-start */
-.head {
-  position: relative;
-  overflow-x: hidden;
-}
+
 
 .hero {
   padding: 0 72px;
@@ -259,11 +257,16 @@ a {
 }
 
 .card:hover::after {
-  content: url("./img/decore3.png");
+  content: "";
+  background: url("./img/decore3.png");
+  background-size: contain;
+  background-repeat: no-repeat;
   clear: both;
   opacity: 1;
   position: absolute;
   z-index: -1;
+  width: 100px;
+  height: 100px;
   left: -35px;
   bottom: -33px;
 }
@@ -756,7 +759,8 @@ a {
     display: block;
   }
   .decore1{
-    right: -40%;
+    width: 70%;
+    right: 0;
   }
 
   .hero-img{
@@ -813,8 +817,8 @@ a {
   }
 
   .decore1{
-    right: -23.5%;
-
+    width: 45%;
+   right: 0;
   }
 
   .hero{
@@ -836,5 +840,30 @@ a {
     margin: 29px 0px 0px 0px;
     gap: 22px;
     justify-content: unset;
+  }
+  .services{
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .decore4{
+    position: absolute;
+    top: -34px;
+    right: 43px;
+  }
+  .card{
+    width: 215px;
+    height: 280px;
+    border-radius: 36px;
+    background: white;
+    padding: 7px 23px 22px 23px;
+    position: relative;
+    transition: all ease-in-out 200ms;
+  }
+
+  .card:hover::after {
+    width: 80px;
+    height: 80px;
+    left: -20px;
   }
 }
