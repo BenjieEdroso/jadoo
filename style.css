@@ -47,7 +47,7 @@ a {
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 1.68em 75px;
+  padding: 1.68em 25px;
 }
 .mobile-nav {
   outline: none;
@@ -65,12 +65,12 @@ a {
 
 
 .hero {
-  padding: 0 72px;
+  padding: 0 25px;
   margin-bottom: 176px;
 }
 
 .hero-img{
-  width: 417px;
+  width: 100%;
   height: fit-content;
 }
 
@@ -135,7 +135,8 @@ a {
 .decore1 {
   position: absolute;
   top: 0;
-  right: -100%;
+  right: 0;
+  width: 80%;
   z-index: -1;
 
 }
@@ -347,8 +348,7 @@ a {
 .mobile-booking {
   position: absolute;
   top: -47px;
-  max-width: 100%;
-  min-width: 70%;
+  width: 100%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -823,7 +823,12 @@ a {
 
   .hero{
     display: flex;
+    justify-content: space-evenly;
     flex-direction: row-reverse;
+  }
+
+  .hero-img{
+    width: 50%;
   }
 
   .hero-subtitle{
@@ -866,4 +871,36 @@ a {
     height: 80px;
     left: -20px;
   }
+
+  .des-cards{
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .img-card{
+    width: 215px;
+    height: 357px;
+  }
+
+  .img-des{
+    height: 227px;
+  }
+
+  .des-cont{
+    padding: 28px 12.5px 42px 12.5px;
+  }
+
+  .decore5{
+    right: -20%;
+    height: 50%;
+  }
+
+  .mobile-booking{
+    width: 45%;
+    right: 0;
+    left: unset;
+    transform: none;
+  }
+
+
 }
