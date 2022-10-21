@@ -336,6 +336,7 @@ a {
 
 .booking {
   margin-top: 66px;
+  position: relative;
 }
 
 .booking-card {
@@ -347,8 +348,9 @@ a {
 
 .mobile-booking {
   position: absolute;
-  top: -47px;
+  top: -25%;
   width: 100%;
+
   left: 50%;
   transform: translateX(-50%);
 }
@@ -772,8 +774,8 @@ a {
     justify-content: unset;
   } 
   .mobile-booking{
-    top: -170px;
-   
+    top: -30%;
+    width: 70%;
    
   }
   .booking-des{
@@ -896,11 +898,88 @@ a {
   }
 
   .mobile-booking{
-    width: 45%;
+    width: 50%;
     right: 0;
     left: unset;
     transform: none;
   }
 
+  .booking .section-subtitle,.booking .section-title{
+    display: inline-block;
+  }
 
+  .booking-des, .booking .section-subtitle, .booking .section-title{
+    position: absolute;
+    left: 75px;
+  }
+
+  .booking .section-title{
+    top: 35px;
+    width: 315px;
+    text-align: left;
+  }
+
+  .booking-des{
+    width: 395px;
+    bottom: 0;
+  }
+
+  .des-icon{
+    margin-top: 33px;
+  }
+  .testimonials{
+    padding: 75px;
+  }
+  .testimonials-top{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    
+  }
+
+  .testimonials-titles .section-subtitle{
+    text-align: left;
+  }
+
+  .section-title.tes-title{
+    padding: 0;
+    text-align: left;
+    width:  354px;
+  }
+
+  .slider-pager{
+    transform: unset;
+    height: fit-content;
+    top: 50%;
+    left: 0;
+  }
+
+  .testimonials-slider{
+    width: 669px;
+  }
+
+  .testimonial-user{
+    top: -25px;
+  }
+
+  .sponsors{
+    margin-top: 0;
+    column-gap: 35px;
+  }
+
+}
+@media only screen and (max-width: 500px){
+  .mobile-booking{
+   top: -5%;
+  }
+}
+@media only screen and (min-width: 630px) and (max-width: 856px){
+  .mobile-booking{
+    width: 85%;
+  }
+}
+@media only screen and (min-width: 857px) and (max-width: 1023px){
+  .mobile-booking{
+    width: 70%;
+  }
 }
