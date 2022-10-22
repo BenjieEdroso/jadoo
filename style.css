@@ -966,6 +966,40 @@ a {
     margin-top: 0;
     column-gap: 35px;
   }
+  .decore7{
+    top: 0;
+    width: 20%;
+  }
+  .decore8{
+    width: 30%;
+  }
+
+  .newsletter-bg{
+    height: 307px;
+  }
+
+  .newsletter-inputs input {
+    width: 321px;
+  }
+
+  .newsletter-text{
+    margin: 0 auto;
+    width: 659px;
+    margin-bottom: 34px;
+  }
+
+  .newsletter-inputs button {
+    width: 180px;
+    height: fit-content;
+    padding: 23px 50px;
+  }
+
+  .newsletter-inputs{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    column-gap: 23px;
+  }
 
 }
 @media only screen and (max-width: 500px){
