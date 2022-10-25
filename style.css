@@ -585,10 +585,12 @@ a {
 
 /* footer-start */
 
-.footer{
-  position: relative;
-  padding: 0px 20px 86px 20px;
+.footer {
+    position: relative;
+    padding: 0px 20px 86px 20px;
 }
+
+
 .footer-logo {
   font-weight: medium;
   font-size: 44px;
@@ -1000,6 +1002,11 @@ a {
     flex-direction: row;
     column-gap: 23px;
   }
+
+    .footer-contents {
+        margin: 0 auto;
+        width: 90%;
+    }
 
 }
 @media only screen and (max-width: 500px){
