@@ -799,6 +799,7 @@ a {
 }
 /* tablet-end */
 
+/* tablet_landscape_start */
 @media screen and (min-width: 1024px){
   .mobile-nav{
     display: none;
@@ -1009,6 +1010,47 @@ a {
     }
 
 }
+/* tablet_landscape_end */
+
+/* desktop_start */
+@media only screen and (min-width: 1440px){
+    .navbar {
+        padding-top: 47px;
+        padding-left: 140px;
+        padding-right: 140px;
+    }
+
+    .hero {
+        display: flex;
+        margin-bottom: 97px;
+        justify-content: space-between;
+        padding-left: 140px;
+        padding-right: 140px;
+    }
+
+    .hero-title {
+        width: 545px;
+        font-size: 77px;
+    }
+
+    .hero-intro {
+        width: 477px;
+        font-weight: 700;
+        font-size: 16px;
+    }
+
+    .find-btn {
+        padding: 19px 27px;
+    }
+
+    .peach-btn {
+        display: inline;
+        padding: 20px 24px;
+    }
+}
+/* desktop_end */
+
+/* other_media_queries */
 @media only screen and (max-width: 500px){
   .mobile-booking{
    top: -5%;
