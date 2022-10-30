@@ -67,6 +67,8 @@ const setContent = (index = 0) => {
   let name = frontCard.children[2];
   let address = frontCard.children[3];
 
+  console.log(index);
+
   imageProfile.setAttribute("src", testimonials[index].profile_url);
   comment.textContent = testimonials[index].comment;
   name.textContent = testimonials[index].name;
@@ -92,64 +94,68 @@ const defaultItem = () => {
 
 nextButton.addEventListener("click", () => {
   let nextItem = currentItem + 1;
-  setContent(nextItem);
-  currentItem = nextItem;
-
-  if (currentItem > 0) {
-    prevImg.setAttribute("src", "./img/up-fill.svg");
-  } else {
-    prevImg.setAttribute("src", "./img/up.svg");
-  }
-
-  if (currentItem == 2) {
-    nextImg.setAttribute("src", "./img/down.svg");
-  } else {
-    nextImg.setAttribute("src", "./img/down-fill.svg");
-  }
-
-  if (currentItem < testimonials.length - 1) {
-    staggerItem();
-  } else {
-    defaultItem();
-  }
-
-  const pager = document.querySelectorAll(".pager");
-  pager.forEach(() => {
-    if (currentItem) {
-      pager[currentItem].classList.add("pager-active");
+  let itemLength = testimonials.length;
+  if (nextItem < itemLength) {
+    setContent(nextItem);
+    currentItem = nextItem;
+    if (currentItem > 0) {
+      prevImg.setAttribute("src", "./img/up-fill.svg");
+    } else {
+      prevImg.setAttribute("src", "./img/up.svg");
     }
-    pager[currentItem - 1].classList.remove("pager-active");
-  });
 
-  animate();
+    if (currentItem == 2) {
+      nextImg.setAttribute("src", "./img/down.svg");
+    } else {
+      nextImg.setAttribute("src", "./img/down-fill.svg");
+    }
+
+    if (currentItem < testimonials.length - 1) {
+      staggerItem();
+    } else {
+      defaultItem();
+    }
+
+    const pager = document.querySelectorAll(".pager");
+    pager.forEach(() => {
+      if (currentItem) {
+        pager[currentItem].classList.add("pager-active");
+      }
+      pager[currentItem - 1].classList.remove("pager-active");
+    });
+
+    animate();
+  }
 });
 
 prevButton.addEventListener("click", () => {
   let prevItem = currentItem - 1;
-  setContent(prevItem);
-  currentItem = prevItem;
+  const firstItem = 0;
+  if (prevItem >= firstItem) {
+    setContent(prevItem);
+    currentItem = prevItem;
+    if (currentItem >= 0) {
+      staggerItem();
+    }
 
-  if (currentItem >= 0) {
-    staggerItem();
+    if (currentItem == 0) {
+      prevImg.setAttribute("src", "./img/up.svg");
+    } else {
+      prevImg.setAttribute("src", "./img/up-fill.svg");
+    }
+
+    if (currentItem != testimonials.length - 1) {
+      nextImg.setAttribute("src", "./img/down-fill.svg");
+    }
+
+    const pager = document.querySelectorAll(".pager");
+    pager.forEach((el, i) => {
+      pager[currentItem].classList.add("pager-active");
+      pager[currentItem + 1].classList.remove("pager-active");
+    });
+
+    animate();
   }
-
-  if (currentItem == 0) {
-    prevImg.setAttribute("src", "./img/up.svg");
-  } else {
-    prevImg.setAttribute("src", "./img/up-fill.svg");
-  }
-
-  if (currentItem != testimonials.length - 1) {
-    nextImg.setAttribute("src", "./img/down-fill.svg");
-  }
-
-  const pager = document.querySelectorAll(".pager");
-  pager.forEach((el, i) => {
-    pager[currentItem].classList.add("pager-active");
-    pager[currentItem + 1].classList.remove("pager-active");
-  });
-
-  animate();
 });
 
 setBackDefault();
