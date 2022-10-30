@@ -1,0 +1,119 @@
+const prevButton = document.querySelector(".prev");
+const nextButton = document.querySelector(".next");
+const testimonialCards = document.querySelectorAll(".testimonials-card");
+
+const testimonials = [
+  {
+    profile_url: "./img/testi1.webp",
+    name: "Mike Taylor",
+    from: "Lahore, Pakistan",
+    comment:
+      "On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no.",
+  },
+  {
+    profile_url: "./img/testi1.webp",
+    name: "John Smith",
+    from: "Sydney, Australia",
+    comment:
+      "On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no.",
+  },
+  {
+    profile_url: "./img/testi1.webp",
+    name: "Chris Thomas",
+    from: "CEO of Red Button",
+    comment:
+      "On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no.",
+  },
+];
+
+let currentItem = 0;
+const backCard = testimonialCards[1];
+const frontCard = testimonialCards[0];
+
+const animate = () => {
+  const testimonialsCard = document.querySelectorAll(".testimonials-card");
+  testimonialsCard[0].style.filter = "blur(2px)";
+
+  testimonialsCard[1].style.filter = "blur(2px)";
+  testimonialsCard[1].style.opacity = "0";
+
+  setTimeout(() => {
+    testimonialsCard[0].style.filter = "blur(0)";
+
+    testimonialsCard[1].style.filter = "blur(0)";
+    testimonialsCard[1].style.opacity = "1";
+  }, 300);
+};
+
+const setBackDefault = () => {
+  backCard.children[0].setAttribute(
+    "src",
+    testimonials[testimonials.length - 1].profile_url
+  );
+  backCard.children[1].textContent =
+    testimonials[testimonials.length - 1].comment;
+  backCard.children[2].textContent = testimonials[testimonials.length - 1].name;
+  backCard.children[3].textContent = testimonials[testimonials.length - 1].from;
+};
+
+const staggerItem = () => {
+  backCard.children[0].setAttribute(
+    "src",
+    testimonials[currentItem + 1].profile_url
+  );
+  backCard.children[1].textContent = testimonials[currentItem + 1].comment;
+  backCard.children[2].textContent = testimonials[currentItem + 1].name;
+  backCard.children[3].textContent = testimonials[currentItem + 1].from;
+};
+
+const defaultItem = () => {
+  backCard.children[0].setAttribute("src", testimonials[0].profile_url);
+  backCard.children[1].textContent = testimonials[0].comment;
+  backCard.children[2].textContent = testimonials[0].name;
+  backCard.children[3].textContent = testimonials[0].from;
+};
+
+nextButton.addEventListener("click", () => {
+  let nextItem = currentItem + 1;
+  let imageProfile = frontCard.children[0];
+  let comment = frontCard.children[1];
+  let name = frontCard.children[2];
+  let address = frontCard.children[3];
+
+  imageProfile.setAttribute("src", testimonials[nextItem].profile_url);
+  comment.textContent = testimonials[nextItem].comment;
+  name.textContent = testimonials[nextItem].name;
+  address.textContent = testimonials[nextItem].from;
+  currentItem = nextItem;
+
+  if (currentItem < testimonials.length - 1) {
+    staggerItem();
+  } else {
+    defaultItem();
+  }
+
+  animate();
+});
+
+prevButton.addEventListener("click", () => {
+  let prevItem = currentItem - 1;
+  let frontCard = testimonialCards[0];
+  let imageProfile = frontCard.children[0];
+  let comment = frontCard.children[1];
+  let name = frontCard.children[2];
+  let address = frontCard.children[3];
+
+  imageProfile.setAttribute("src", testimonials[prevItem].profile_url);
+  comment.textContent = testimonials[prevItem].comment;
+  name.textContent = testimonials[prevItem].name;
+  address.textContent = testimonials[prevItem].from;
+  currentItem = prevItem;
+
+  if (currentItem >= 0) {
+    staggerItem();
+  }
+
+  animate();
+});
+
+setBackDefault();
