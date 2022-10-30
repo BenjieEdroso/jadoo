@@ -29,6 +29,8 @@ const testimonials = [
 let currentItem = 0;
 const backCard = testimonialCards[1];
 const frontCard = testimonialCards[0];
+const prevImg = document.querySelector(".prev-img");
+const nextImg = document.querySelector(".next-img");
 
 const animate = () => {
   const testimonialsCard = document.querySelectorAll(".testimonials-card");
@@ -56,6 +58,19 @@ const setBackDefault = () => {
   backCard.children[3].textContent = testimonials[testimonials.length - 1].from;
 };
 
+const setContent = (index = 0) => {
+  let frontCard = testimonialCards[0];
+  let imageProfile = frontCard.children[0];
+  let comment = frontCard.children[1];
+  let name = frontCard.children[2];
+  let address = frontCard.children[3];
+
+  imageProfile.setAttribute("src", testimonials[index].profile_url);
+  comment.textContent = testimonials[index].comment;
+  name.textContent = testimonials[index].name;
+  address.textContent = testimonials[index].from;
+};
+
 const staggerItem = () => {
   backCard.children[0].setAttribute(
     "src",
@@ -75,16 +90,20 @@ const defaultItem = () => {
 
 nextButton.addEventListener("click", () => {
   let nextItem = currentItem + 1;
-  let imageProfile = frontCard.children[0];
-  let comment = frontCard.children[1];
-  let name = frontCard.children[2];
-  let address = frontCard.children[3];
-
-  imageProfile.setAttribute("src", testimonials[nextItem].profile_url);
-  comment.textContent = testimonials[nextItem].comment;
-  name.textContent = testimonials[nextItem].name;
-  address.textContent = testimonials[nextItem].from;
+  setContent(nextItem);
   currentItem = nextItem;
+
+  if (currentItem > 0) {
+    prevImg.setAttribute("src", "./img/up-fill.svg");
+  } else {
+    prevImg.setAttribute("src", "./img/up.svg");
+  }
+
+  if (currentItem == 2) {
+    nextImg.setAttribute("src", "./img/down.svg");
+  } else {
+    nextImg.setAttribute("src", "./img/down-fill.svg");
+  }
 
   if (currentItem < testimonials.length - 1) {
     staggerItem();
@@ -105,20 +124,21 @@ nextButton.addEventListener("click", () => {
 
 prevButton.addEventListener("click", () => {
   let prevItem = currentItem - 1;
-  let frontCard = testimonialCards[0];
-  let imageProfile = frontCard.children[0];
-  let comment = frontCard.children[1];
-  let name = frontCard.children[2];
-  let address = frontCard.children[3];
-
-  imageProfile.setAttribute("src", testimonials[prevItem].profile_url);
-  comment.textContent = testimonials[prevItem].comment;
-  name.textContent = testimonials[prevItem].name;
-  address.textContent = testimonials[prevItem].from;
+  setContent(prevItem);
   currentItem = prevItem;
 
   if (currentItem >= 0) {
     staggerItem();
+  }
+
+  if (currentItem == 0) {
+    prevImg.setAttribute("src", "./img/up.svg");
+  } else {
+    prevImg.setAttribute("src", "./img/up-fill.svg");
+  }
+
+  if (currentItem != testimonials.length - 1) {
+    nextImg.setAttribute("src", "./img/down-fill.svg");
   }
 
   const pager = document.querySelectorAll(".pager");
