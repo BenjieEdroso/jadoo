@@ -8,6 +8,7 @@
   font-family: volkhovBold;
   src: url("./fonts/Volkhov-Bold.woff");
 }
+
 :root {
   --black: #212832;
   --yellow: #f1a501;
@@ -33,6 +34,7 @@ ul {
   display: flex;
   list-style: none;
 }
+
 a {
   text-decoration: none;
   color: var(--black);
@@ -49,6 +51,7 @@ a {
   justify-content: space-between;
   padding: 1.68em 25px;
 }
+
 .mobile-nav {
   outline: none;
   background-color: white;
@@ -56,9 +59,11 @@ a {
   border: none;
   border-radius: 5px;
 }
+
 .navlinks {
   display: none;
 }
+
 /* navigation-end */
 
 /* hero-start */
@@ -69,7 +74,7 @@ a {
   margin-bottom: 176px;
 }
 
-.hero-img{
+.hero-img {
   width: 100%;
   height: fit-content;
 }
@@ -94,11 +99,13 @@ a {
   margin: 0 25px;
   line-height: 30px;
 }
+
 .hero-btns {
   display: flex;
   justify-content: space-between;
   margin: 29px 25px 0px 25px;
 }
+
 .find-btn {
   font-size: 18px;
   font-weight: medium;
@@ -129,6 +136,7 @@ a {
   margin-right: 21px;
   box-shadow: 0px 15px 30px rgb(223, 105, 81, 30%);
 }
+
 /* hero-end */
 
 /* decorations-start */
@@ -140,10 +148,12 @@ a {
   z-index: -1;
 
 }
+
 .decore2 {
   display: inline-block;
   position: relative;
 }
+
 .decore2::after {
   content: url("./img/decore2.png");
   clear: both;
@@ -178,24 +188,26 @@ a {
   left: 0;
   bottom: 0;
 }
+
 .decore9 {
   position: absolute;
   right: -13px;
   top: -15px;
 }
 
-.decore10{
+.decore10 {
   position: absolute;
   top: 27px;
   right: 10px;
 }
 
-.decore11{
+.decore11 {
   position: absolute;
   bottom: 0;
   right: 0;
   pointer-events: none;
 }
+
 /* decorations-end */
 
 /* category-start */
@@ -203,6 +215,7 @@ a {
   position: relative;
   margin-bottom: 98px;
 }
+
 .services {
   margin-top: 61px;
   row-gap: 69px;
@@ -210,18 +223,21 @@ a {
   display: flex;
   flex-direction: column;
 }
+
 .section-subtitle {
   font-size: 18px;
   text-transform: uppercase;
   color: #5e6282;
   text-align: center;
 }
+
 .section-title {
   font-family: volkhob-bold;
   font-size: 35px;
   color: #14183e;
   text-align: center;
 }
+
 .card {
   width: 267px;
   height: 314px;
@@ -231,6 +247,7 @@ a {
   position: relative;
   transition: all ease-in-out 200ms;
 }
+
 .card div {
   font-size: 20px;
   font-weight: medium;
@@ -271,6 +288,7 @@ a {
   left: -35px;
   bottom: -33px;
 }
+
 /* category-end */
 
 /* destinations-start */
@@ -312,10 +330,12 @@ a {
   font-size: 18px;
   margin-bottom: 19px;
 }
+
 .des-cont {
   position: relative;
   padding: 28px 25px 42px 25px;
 }
+
 .des-subtitle {
   display: flex;
   align-items: center;
@@ -330,6 +350,7 @@ a {
   position: relative;
   z-index: 4;
 }
+
 /* destinations-end */
 
 /* booking-start */
@@ -343,7 +364,7 @@ a {
   position: relative;
   width: 100vw;
   height: 459px;
- 
+
 }
 
 .mobile-booking {
@@ -359,11 +380,13 @@ a {
   width: 47px;
   height: 48px;
 }
+
 .booking-des {
- 
+
   padding: 0 25px;
   flex-direction: column;
 }
+
 .des-icon {
   width: fit-content;
   margin-top: 66px;
@@ -386,12 +409,15 @@ a {
 .testimonials {
   margin-top: 111px;
 }
-.testimonials-top{
+
+.testimonials-top {
   position: relative;
 }
+
 .tes-title {
   padding: 50px;
 }
+
 .testimonials-slider {
   position: relative;
   width: 100%;
@@ -409,6 +435,7 @@ a {
   box-shadow: 0px 100px 80px rgb(0 0 0 / 10%);
   padding: 45px 16px;
 }
+
 .testimonial-author,
 .testimonial-addr {
   color: var(--light-violet);
@@ -430,11 +457,13 @@ a {
   left: -8%;
   top: 0;
 }
+
 .testi-img {
   position: absolute;
   top: -15px;
   left: -40px;
 }
+
 .testimonial-msg {
   color: var(--light-violet);
 }
@@ -466,6 +495,11 @@ a {
   border: none;
   padding: 8px;
 }
+
+.prev span, .next span{
+  display: none;
+}
+
 .slider-pager {
   width: fit-content;
   position: absolute;
@@ -473,6 +507,7 @@ a {
   left: 50%;
   transform: translateX(-50%);
 }
+
 .pager {
   width: 12px;
   height: 12px;
@@ -484,6 +519,7 @@ a {
 .pager:first-of-type {
   background: var(--blue);
 }
+
 .pager:last-of-type {
   margin: 0;
 }
@@ -496,6 +532,7 @@ a {
   column-gap: 40px;
   justify-content: space-evenly;
 }
+
 .sponsor {
   width: fit-content;
   height: 86px;
@@ -582,13 +619,14 @@ a {
   left: 25px;
   top: 25px;
 }
+
 /* newsletter-end */
 
 /* footer-start */
 
 .footer {
-    position: relative;
-    padding: 0px 20px 86px 20px;
+  position: relative;
+  padding: 0px 20px 86px 20px;
 }
 
 
@@ -616,6 +654,7 @@ a {
   column-gap: 60px;
   row-gap: 51px;
 }
+
 .footer-copy {
   margin-top: 18px;
   margin-bottom: 10px;
@@ -626,7 +665,7 @@ a {
   width: fit-content;
 }
 
-.footer-links li{
+.footer-links li {
   margin-bottom: 12px;
 }
 
@@ -655,7 +694,7 @@ a {
   position: relative;
 }
 
-.footer-links-logo li a::after{
+.footer-links-logo li a::after {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -664,31 +703,31 @@ a {
 
 .footer-links-logo li:nth-child(1) a::after {
   content: url("./img/facebook.svg");
- }
-.footer-links-logo li:nth-child(1) a:hover {
- background: #3b5998;
 }
+
+.footer-links-logo li:nth-child(1) a:hover {
+  background: #3b5998;
+}
+
 .footer-links-logo li:nth-child(1) a:hover::after {
   content: url("./img/facebook-white.svg");
 }
 
 .footer-links-logo li:nth-child(2) a::after {
   content: url("./img/instagram.svg");
- }
+}
 
 .footer-links-logo li:nth-child(2) a:hover {
-  background: conic-gradient(
-    from 180deg,
-    #b8d2f1,
-    #f289aa,
-    #c68bf0,
-    #d164da,
-    #c963e8,
-    #bfc2e8,
-    #ffc999,
-    #bad0f1,
-    #ffffff
-  );
+  background: conic-gradient(from 180deg,
+      #b8d2f1,
+      #f289aa,
+      #c68bf0,
+      #d164da,
+      #c963e8,
+      #bfc2e8,
+      #ffc999,
+      #bad0f1,
+      #ffffff);
 
 }
 
@@ -698,10 +737,12 @@ a {
 
 .footer-links-logo li:nth-child(3) a::after {
   content: url("./img/twitter.svg");
- }
-.footer-links-logo li:nth-child(3) a:hover {
- background: #00acee;
 }
+
+.footer-links-logo li:nth-child(3) a:hover {
+  background: #00acee;
+}
+
 .footer-links-logo li:nth-child(3) a:hover::after {
   content: url("./img/twitter-white.svg");
 }
@@ -716,18 +757,19 @@ a {
   transform: translate(-50%, -50%);
 }
 
-.discover{
+.discover {
   font-size: 20px;
   font-weight: 500;
   color: #5E6282;
   margin-bottom: 16px;
 }
 
-.store-btns{
+.store-btns {
   display: flex;
   gap: 7px;
 }
-.store-btn{
+
+.store-btn {
   display: flex;
   width: 107px;
   height: 35px;
@@ -740,132 +782,143 @@ a {
   cursor: pointer;
 }
 
-.store-btn:nth-of-type(1)::after{
- position: absolute;
- top: 50%;
- left: 50%;
- transform: translate(-50%, -50%);
- content: url("./img/googleplay.svg");
+.store-btn:nth-of-type(1)::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: url("./img/googleplay.svg");
 }
-.store-btn:nth-of-type(2)::after{
- position: absolute;
- top: 50%;
- left: 50%;
- transform: translate(-50%, -50%);
- content: url("./img/applestore.svg");
+
+.store-btn:nth-of-type(2)::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: url("./img/applestore.svg");
 
 }
+
 /* footer-end */
 
 
 /* tablet-start */
-@media screen and (min-width: 768px) and (max-width: 1023px){
-  .mobile-nav{
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .mobile-nav {
     display: block;
   }
-  .decore1{
+
+  .decore1 {
     width: 70%;
     right: 0;
   }
 
-  .hero-img{
+  .hero-img {
     width: 617px;
   }
-  
-  .hero-btns{
+
+  .hero-btns {
     gap: 44px;
     justify-content: unset;
-  } 
-  .mobile-booking{
+  }
+
+  .mobile-booking {
     top: -30%;
     width: 70%;
-   
+
   }
-  .booking-des{
+
+  .booking-des {
     margin-top: 50px;
     align-items: center;
   }
 
-  .sponsors{
+  .sponsors {
     width: 80%;
     margin: 0 auto;
   }
 
-  .decore10{
+  .decore10 {
     right: 35px;
   }
-  .footer{
+
+  .footer {
     padding: 0 35px 86px 35px;
   }
 }
+
 /* tablet-end */
 
 /* tablet_landscape_start */
-@media screen and (min-width: 1024px){
-  .mobile-nav{
+@media screen and (min-width: 1024px) {
+  .mobile-nav {
     display: none;
   }
 
-  .navlinks{
+  .navlinks {
     display: flex;
     gap: 27.5px;
     color: #212832;
   }
 
-  .navbar{
+  .navbar {
     padding: 23.5px 72px 65px 72px;
   }
 
-  .signup{
+  .signup {
     padding: 9px 22px;
     border: 1px solid #212832;
     border-radius: 5px;
   }
 
-  .decore1{
+  .decore1 {
     width: 45%;
-   right: 0;
+    right: 0;
   }
 
-  .hero{
+  .hero {
     display: flex;
     justify-content: space-evenly;
     flex-direction: row-reverse;
-        max-width: 1200.87px;
+    max-width: 1200.87px;
     padding: 0px 72px;
     margin: 0 auto;
   }
 
-  .hero-img{
+  .hero-img {
     width: 50%;
   }
 
-  .hero-subtitle{
+  .hero-subtitle {
     text-align: unset;
   }
 
-  .hero-title{
+  .hero-title {
     margin: 43px 0px 29px 0px;
   }
-  .hero-intro{
+
+  .hero-intro {
     margin: 0;
   }
-  .hero-btns{
+
+  .hero-btns {
     margin: 29px 0px 0px 0px;
     gap: 22px;
     justify-content: unset;
   }
-  .services{
+
+  .services {
     flex-direction: row;
     justify-content: space-evenly;
   }
 
-  .decore4{
+  .decore4 {
     position: absolute;
     top: -34px;
     right: 43px;
   }
-  .card{
+
+  .card {
     width: 215px;
     height: 280px;
     border-radius: 36px;
@@ -881,107 +934,114 @@ a {
     left: -20px;
   }
 
-  .des-cards{
+  .des-cards {
     flex-direction: row;
     justify-content: space-evenly;
   }
 
-  .img-card{
+  .img-card {
     width: 290px;
     height: 400px;
   }
 
-  .img-des{
+  .img-des {
     height: 280px;
   }
 
-  .des-cont{
+  .des-cont {
     padding: 28px 12.5px 42px 12.5px;
   }
 
-  .decore5{
+  .decore5 {
     right: -11%;
     height: 40%;
   }
 
-  .mobile-booking{
+  .mobile-booking {
     width: 50%;
     right: 0;
     left: unset;
     transform: none;
   }
 
-  .booking .section-subtitle,.booking .section-title{
+  .booking .section-subtitle,
+  .booking .section-title {
     display: inline-block;
   }
 
-  .booking-des, .booking .section-subtitle, .booking .section-title{
+  .booking-des,
+  .booking .section-subtitle,
+  .booking .section-title {
     position: absolute;
     left: 75px;
   }
 
-  .booking .section-title{
+  .booking .section-title {
     top: 35px;
     width: 315px;
     text-align: left;
   }
 
-  .booking-des{
+  .booking-des {
     width: 395px;
     bottom: 0;
   }
 
-  .des-icon{
+  .des-icon {
     margin-top: 33px;
   }
-  .testimonials{
+
+  .testimonials {
     padding: 75px;
   }
-  .testimonials-top{
+
+  .testimonials-top {
     position: relative;
     display: flex;
     justify-content: space-between;
-    
+
   }
 
-  .testimonials-titles .section-subtitle{
+  .testimonials-titles .section-subtitle {
     text-align: left;
   }
 
-  .section-title.tes-title{
+  .section-title.tes-title {
     padding: 0;
     text-align: left;
-    width:  354px;
+    width: 354px;
   }
 
-  .slider-pager{
+  .slider-pager {
     transform: unset;
     height: fit-content;
     top: 50%;
     left: 0;
   }
 
-  .testimonials-slider{
+  .testimonials-slider {
     width: 669px;
   }
 
-  .testimonial-user{
+  .testimonial-user {
     top: -25px;
   }
 
-  .sponsors{
+  .sponsors {
     margin-top: 0;
     column-gap: 35px;
   }
-  .decore7{
+
+  .decore7 {
     top: 0;
     width: 20%;
   }
-  .decore8{
+
+  .decore8 {
     width: 30%;
   }
 
-  .newsletter-bg{
+  .newsletter-bg {
     height: 307px;
   }
 
@@ -989,7 +1049,7 @@ a {
     width: 321px;
   }
 
-  .newsletter-text{
+  .newsletter-text {
     margin: 0 auto;
     width: 659px;
     margin-bottom: 34px;
@@ -1001,166 +1061,170 @@ a {
     padding: 23px 50px;
   }
 
-  .newsletter-inputs{
+  .newsletter-inputs {
     display: flex;
     justify-content: center;
     flex-direction: row;
     column-gap: 23px;
   }
 
-    .footer-contents {
-        margin: 0 auto;
-        width: 90%;
-    }
+  .footer-contents {
+    margin: 0 auto;
+    width: 90%;
+  }
 
 }
+
 /* tablet_landscape_end */
 
 /* desktop_start */
-@media only screen and (min-width: 1440px){
-  .decore1{
+@media only screen and (min-width: 1440px) {
+  .decore1 {
     width: 37%;
 
   }
-    .navbar {
-      max-width: 1160.58px;
-      padding-top: 47px;
-      padding-left: 0;
-      padding-right: 0;
-      margin: 0 auto;
-    }
 
-    .hero {
-        display: flex;
-        margin-bottom: 97px;
-        justify-content: space-between;
-        padding-left: 140px;
-        padding-right: 140px;
-        max-width: 1200.87px;
-        margin: 0 auto;
-    }
+  .navbar {
+    max-width: 1160.58px;
+    padding-top: 47px;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0 auto;
+  }
 
-    .hero-title {
-        width: 545px;
-        font-size: 77px;
-    }
+  .hero {
+    display: flex;
+    margin-bottom: 97px;
+    justify-content: space-between;
+    padding-left: 140px;
+    padding-right: 140px;
+    max-width: 1200.87px;
+    margin: 0 auto;
+  }
 
-    .hero-intro {
-        width: 477px;
-        font-weight: 700;
-        font-size: 16px;
-    }
+  .hero-title {
+    width: 545px;
+    font-size: 77px;
+  }
 
-    .find-btn {
-        padding: 19px 27px;
-    }
+  .hero-intro {
+    width: 477px;
+    font-weight: 700;
+    font-size: 16px;
+  }
 
-    .peach-btn {
-        display: inline;
-        padding: 20px 24px;
-    }
+  .find-btn {
+    padding: 19px 27px;
+  }
 
-    .category{
-  
-      max-width: 1228px;
-      margin: 97px auto 0px auto;
-    }
+  .peach-btn {
+    display: inline;
+    padding: 20px 24px;
+  }
 
-    .destinations{
-      max-width: 1102px;
-      margin: 123px auto 0px auto;
-    }
+  .category {
 
-    .img-card {
-      width: 315px;
-      height: 457px;
+    max-width: 1228px;
+    margin: 97px auto 0px auto;
+  }
+
+  .destinations {
+    max-width: 1102px;
+    margin: 123px auto 0px auto;
+  }
+
+  .img-card {
+    width: 315px;
+    height: 457px;
   }
 
   .img-des {
     height: 331px;
-}
+  }
 
-.decore5{
-  right: -17%;
-  height: 50%;
-}
+  .decore5 {
+    right: -17%;
+    height: 50%;
+  }
 
-    .booking{
-      max-width: 1114px;
-      margin: 186px auto 0px auto;
-    }
+  .booking {
+    max-width: 1114px;
+    margin: 186px auto 0px auto;
+  }
 
-    .booking-card{
-      width:485px;
-      height: 459px;
-      margin-left: auto;
-    }
+  .booking-card {
+    width: 485px;
+    height: 459px;
+    margin-left: auto;
+  }
 
-    .mobile-booking{
-      width: 130%;
-      right: -10%;
-    }
+  .mobile-booking {
+    width: 130%;
+    right: -10%;
+  }
 
-    .testimonials{
-      max-width: 1085px;
-      margin: 200px auto 0px auto;
-    }
+  .testimonials {
+    max-width: 1085px;
+    margin: 200px auto 0px auto;
+  }
 
-    .testimonial-user{
-      top: -15px;
-    }
-   
-    .testimonials-card{
-      padding-top: 28px;
-      width: 504px;
-    }
+  .testimonial-user {
+    top: -15px;
+  }
 
-    .sponsors{
-      padding-left: 0px;
-      padding-right: 0px;
-    }
+  .testimonials-card {
+    padding-top: 28px;
+    width: 504px;
+  }
 
-    .newsletter{
-      max-width: 1170px;
-      margin: 111px auto 0px auto;
-    }
+  .sponsors {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 
-    .footer{
-      margin-top: 166px;
-    }
+  .newsletter {
+    max-width: 1170px;
+    margin: 111px auto 0px auto;
+  }
 
-    .footer-logo{
-      padding-top: 0;
-    }
+  .footer {
+    margin-top: 166px;
+  }
 
-    .footer-contents{
-      max-width: 1060px;
-      display: flex;
-      margin: 0 auto;
-    }
+  .footer-logo {
+    padding-top: 0;
+  }
 
-    .footer-flex{
-      margin-left: 83px;
-    }
+  .footer-contents {
+    max-width: 1060px;
+    display: flex;
+    margin: 0 auto;
+  }
 
- 
+  .footer-flex {
+    margin-left: 83px;
+  }
+
+
 }
 
 /* desktop_end */
 
 /* other_media_queries */
-@media only screen and (max-width: 500px){
-  .mobile-booking{
-   top: -5%;
+@media only screen and (max-width: 500px) {
+  .mobile-booking {
+    top: -5%;
   }
 }
-@media only screen and (min-width: 630px) and (max-width: 856px){
-  .mobile-booking{
+
+@media only screen and (min-width: 630px) and (max-width: 856px) {
+  .mobile-booking {
     width: 85%;
   }
 }
-@media only screen and (min-width: 857px) and (max-width: 1023px){
-  .mobile-booking{
+
+@media only screen and (min-width: 857px) and (max-width: 1023px) {
+  .mobile-booking {
     width: 70%;
   }
 }
