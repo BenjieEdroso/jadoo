@@ -92,6 +92,14 @@ nextButton.addEventListener("click", () => {
     defaultItem();
   }
 
+  const pager = document.querySelectorAll(".pager");
+  pager.forEach((el, i) => {
+    if (currentItem) {
+      pager[currentItem].classList.add("pager-active");
+    }
+    pager[currentItem - 1].classList.remove("pager-active");
+  });
+
   animate();
 });
 
@@ -112,6 +120,12 @@ prevButton.addEventListener("click", () => {
   if (currentItem >= 0) {
     staggerItem();
   }
+
+  const pager = document.querySelectorAll(".pager");
+  pager.forEach((el, i) => {
+    pager[currentItem].classList.add("pager-active");
+    pager[currentItem + 1].classList.remove("pager-active");
+  });
 
   animate();
 });

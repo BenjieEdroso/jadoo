@@ -523,10 +523,9 @@ a {
   margin-right: 25px;
 }
 
-.pager:first-of-type {
+.pager-active {
   background: var(--blue);
 }
-
 .pager:last-of-type {
   margin: 0;
 }
@@ -1120,12 +1119,18 @@ a {
   }
 
   .find-btn {
+    cursor: pointer;
     padding: 19px 27px;
   }
 
   .peach-btn {
     display: inline;
     padding: 20px 24px;
+    cursor: pointer;
+  }
+
+  .demo-btn {
+    cursor: pointer;
   }
 
   .category {
