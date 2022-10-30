@@ -52,6 +52,12 @@ a {
   padding: 1.68em 25px;
 }
 
+.signup:hover{
+  background-color: #212832;
+  transition: all ease-in-out 300ms;
+  color: #fff;
+}
+
 .mobile-nav {
   outline: none;
   background-color: white;
@@ -197,7 +203,7 @@ a {
 
 .decore10 {
   position: absolute;
-  top: 27px;
+  top: -100px;
   right: 10px;
 }
 
@@ -206,6 +212,12 @@ a {
   bottom: 0;
   right: 0;
   pointer-events: none;
+}
+
+.decore12{
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 /* decorations-end */
@@ -494,11 +506,10 @@ a {
   outline: none;
   border: none;
   padding: 8px;
+  font-size: 0;
+  cursor: pointer;
 }
 
-.prev span, .next span{
-  display: none;
-}
 
 .slider-pager {
   width: fit-content;
@@ -780,6 +791,7 @@ a {
   color: #fff;
   position: relative;
   cursor: pointer;
+  font-size: 0;
 }
 
 .store-btn:nth-of-type(1)::after {
@@ -868,12 +880,18 @@ a {
   .signup {
     padding: 9px 22px;
     border: 1px solid #212832;
+    transition: all ease-in-out 300ms;
     border-radius: 5px;
   }
 
   .decore1 {
     width: 45%;
     right: 0;
+  }
+
+  .decore10{
+    top: -100px;
+    right: 10px;
   }
 
   .hero {
@@ -1203,6 +1221,11 @@ a {
 
   .footer-flex {
     margin-left: 83px;
+  }
+
+  .decore10{
+    top: -270px;
+    right: 90px;
   }
 
 
