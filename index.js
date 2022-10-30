@@ -34,28 +34,30 @@ const nextImg = document.querySelector(".next-img");
 
 const animate = () => {
   const testimonialsCard = document.querySelectorAll(".testimonials-card");
-  testimonialsCard[0].style.filter = "blur(2px)";
-
-  testimonialsCard[1].style.filter = "blur(2px)";
-  testimonialsCard[1].style.opacity = "0";
+  const cardOnTop = testimonialCards[0];
+  const cardBehind = testimonialCards[1];
+  cardOnTop.style.filter = "blur(2px)";
+  cardBehind.style.filter = "blur(2px)";
+  cardBehind.style.opacity = "0";
 
   setTimeout(() => {
-    testimonialsCard[0].style.filter = "blur(0)";
-
-    testimonialsCard[1].style.filter = "blur(0)";
-    testimonialsCard[1].style.opacity = "1";
+    cardOnTop.style.filter = "blur(0)";
+    cardBehind.style.filter = "blur(0)";
+    cardBehind.style.opacity = "1";
   }, 300);
 };
 
 const setBackDefault = () => {
-  backCard.children[0].setAttribute(
-    "src",
-    testimonials[testimonials.length - 1].profile_url
-  );
-  backCard.children[1].textContent =
-    testimonials[testimonials.length - 1].comment;
-  backCard.children[2].textContent = testimonials[testimonials.length - 1].name;
-  backCard.children[3].textContent = testimonials[testimonials.length - 1].from;
+  let lastTestimonial = testimonials[testimonials.length - 1];
+  const imageTag = backCard.children[0];
+  const commentTag = backCard.children[1];
+  const nameTag = backCard.children[2];
+  const addressTag = backCard.children[3];
+
+  imageTag.setAttribute("src", lastTestimonial.profile_url);
+  commentTag.textContent = lastTestimonial.comment;
+  nameTag.textContent = lastTestimonial.name;
+  addressTag.textContent = lastTestimonial.from;
 };
 
 const setContent = (index = 0) => {
@@ -112,7 +114,7 @@ nextButton.addEventListener("click", () => {
   }
 
   const pager = document.querySelectorAll(".pager");
-  pager.forEach((el, i) => {
+  pager.forEach(() => {
     if (currentItem) {
       pager[currentItem].classList.add("pager-active");
     }
