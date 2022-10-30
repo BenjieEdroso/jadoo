@@ -1,7 +1,6 @@
 const prevButton = document.querySelector(".prev");
 const nextButton = document.querySelector(".next");
 const testimonialCards = document.querySelectorAll(".testimonials-card");
-
 const testimonials = [
   {
     profile_url: "./img/testi1.webp",
@@ -25,39 +24,26 @@ const testimonials = [
       "On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no.",
   },
 ];
-
+const numberOfTestimonials = testimonials.length - 1;
 let currentItem = 0;
 const backCard = testimonialCards[1];
 const frontCard = testimonialCards[0];
 const prevImg = document.querySelector(".prev-img");
 const nextImg = document.querySelector(".next-img");
 
-const animate = () => {
-  const testimonialsCard = document.querySelectorAll(".testimonials-card");
-  const cardOnTop = testimonialCards[0];
-  const cardBehind = testimonialCards[1];
-  cardOnTop.style.filter = "blur(2px)";
-  cardBehind.style.filter = "blur(2px)";
-  cardBehind.style.opacity = "0";
-
+const delayBlur = (frontCard, backCard) => {
   setTimeout(() => {
-    cardOnTop.style.filter = "blur(0)";
-    cardBehind.style.filter = "blur(0)";
-    cardBehind.style.opacity = "1";
+    frontCard.style.filter = "blur(0)";
+    backCard.style.filter = "blur(0)";
+    backCard.style.opacity = "1";
   }, 300);
 };
 
-const setBackDefault = () => {
-  let lastTestimonial = testimonials[testimonials.length - 1];
-  const imageTag = backCard.children[0];
-  const commentTag = backCard.children[1];
-  const nameTag = backCard.children[2];
-  const addressTag = backCard.children[3];
-
-  imageTag.setAttribute("src", lastTestimonial.profile_url);
-  commentTag.textContent = lastTestimonial.comment;
-  nameTag.textContent = lastTestimonial.name;
-  addressTag.textContent = lastTestimonial.from;
+const animate = () => {
+  frontCard.style.filter = "blur(2px)";
+  backCard.style.filter = "blur(2px)";
+  backCard.style.opacity = "0";
+  delayBlur(frontCard, backCard);
 };
 
 const setContent = (index = 0) => {
@@ -75,7 +61,7 @@ const setContent = (index = 0) => {
   address.textContent = testimonials[index].from;
 };
 
-const staggerItem = () => {
+const staggerItem = (currentItem) => {
   backCard.children[0].setAttribute(
     "src",
     testimonials[currentItem + 1].profile_url
@@ -92,70 +78,74 @@ const defaultItem = () => {
   backCard.children[3].textContent = testimonials[0].from;
 };
 
-nextButton.addEventListener("click", () => {
+const moveActivePage = (currentItem, kindOfButton) => {
+  const pager = document.querySelectorAll(".pager");
+  pager.forEach(() => {
+    if (kindOfButton === "prev") {
+      pager[currentItem].classList.add("pager-active");
+      pager[currentItem + 1].classList.remove("pager-active");
+    } else {
+      pager[currentItem].classList.add("pager-active");
+      pager[currentItem - 1].classList.remove("pager-active");
+    }
+  });
+};
+
+const staggerItems = (currentItem, numberOfTestimonials) => {
+  if (currentItem < numberOfTestimonials) {
+    staggerItem(currentItem);
+  } else {
+    defaultItem(currentItem);
+  }
+};
+
+const changeIconOnLast = (currentItem, firstItem, numberOfTestimonials) => {
+  if (currentItem == firstItem) {
+    prevImg.setAttribute("src", "./img/up.svg");
+  } else {
+    prevImg.setAttribute("src", "./img/up-fill.svg");
+  }
+
+  if (currentItem == numberOfTestimonials) {
+    nextImg.setAttribute("src", "./img/down.svg");
+  } else {
+    nextImg.setAttribute("src", "./img/down-fill.svg");
+  }
+};
+
+const goToNextComment = (e) => {
+  const nextBtn = e.target.classList[0];
   let nextItem = currentItem + 1;
   let itemLength = testimonials.length;
+  const firstItem = 0;
   if (nextItem < itemLength) {
     setContent(nextItem);
     currentItem = nextItem;
-    if (currentItem > 0) {
-      prevImg.setAttribute("src", "./img/up-fill.svg");
-    } else {
-      prevImg.setAttribute("src", "./img/up.svg");
-    }
-
-    if (currentItem == 2) {
-      nextImg.setAttribute("src", "./img/down.svg");
-    } else {
-      nextImg.setAttribute("src", "./img/down-fill.svg");
-    }
-
-    if (currentItem < testimonials.length - 1) {
-      staggerItem();
-    } else {
-      defaultItem();
-    }
-
-    const pager = document.querySelectorAll(".pager");
-    pager.forEach(() => {
-      if (currentItem) {
-        pager[currentItem].classList.add("pager-active");
-      }
-      pager[currentItem - 1].classList.remove("pager-active");
-    });
-
+    changeIconOnLast(currentItem, firstItem, numberOfTestimonials);
+    staggerItems(currentItem, numberOfTestimonials);
+    moveActivePage(currentItem, nextBtn);
     animate();
   }
-});
+};
 
-prevButton.addEventListener("click", () => {
+const goToPrevComment = (e) => {
+  const prevBtn = e.target.classList[0];
   let prevItem = currentItem - 1;
   const firstItem = 0;
   if (prevItem >= firstItem) {
     setContent(prevItem);
     currentItem = prevItem;
-    if (currentItem >= 0) {
-      staggerItem();
-    }
-
-    if (currentItem == 0) {
-      prevImg.setAttribute("src", "./img/up.svg");
-    } else {
-      prevImg.setAttribute("src", "./img/up-fill.svg");
-    }
-
-    if (currentItem != testimonials.length - 1) {
-      nextImg.setAttribute("src", "./img/down-fill.svg");
-    }
-
-    const pager = document.querySelectorAll(".pager");
-    pager.forEach((el, i) => {
-      pager[currentItem].classList.add("pager-active");
-      pager[currentItem + 1].classList.remove("pager-active");
-    });
-
+    changeIconOnLast(currentItem, firstItem, numberOfTestimonials);
+    staggerItems(currentItem, numberOfTestimonials);
+    moveActivePage(currentItem, prevBtn);
     animate();
   }
+};
+
+nextButton.addEventListener("click", (e) => {
+  goToNextComment(e);
 });
 
-setBackDefault();
+prevButton.addEventListener("click", (e) => {
+  goToPrevComment(e);
+});

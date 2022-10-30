@@ -507,6 +507,10 @@ a {
   cursor: pointer;
 }
 
+.prev-img {
+  pointer-events: none;
+}
+
 .slider-pager {
   width: fit-content;
   position: absolute;
