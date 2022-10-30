@@ -386,7 +386,9 @@ a {
 .testimonials {
   margin-top: 111px;
 }
-
+.testimonials-top{
+  position: relative;
+}
 .tes-title {
   padding: 50px;
 }
@@ -401,7 +403,6 @@ a {
   min-width: 280px;
   max-width: 346px;
   border-radius: 10px;
-
   background: #fff;
   left: 46%;
   transform: translateX(-50%);
@@ -830,6 +831,9 @@ a {
     display: flex;
     justify-content: space-evenly;
     flex-direction: row-reverse;
+        max-width: 1200.87px;
+    padding: 0px 72px;
+    margin: 0 auto;
   }
 
   .hero-img{
@@ -883,12 +887,12 @@ a {
   }
 
   .img-card{
-    width: 215px;
-    height: 357px;
+    width: 290px;
+    height: 400px;
   }
 
   .img-des{
-    height: 227px;
+    height: 280px;
   }
 
   .des-cont{
@@ -896,8 +900,8 @@ a {
   }
 
   .decore5{
-    right: -20%;
-    height: 50%;
+    right: -11%;
+    height: 40%;
   }
 
   .mobile-booking{
@@ -1014,10 +1018,16 @@ a {
 
 /* desktop_start */
 @media only screen and (min-width: 1440px){
+  .decore1{
+    width: 37%;
+
+  }
     .navbar {
-        padding-top: 47px;
-        padding-left: 140px;
-        padding-right: 140px;
+      max-width: 1160.58px;
+      padding-top: 47px;
+      padding-left: 0;
+      padding-right: 0;
+      margin: 0 auto;
     }
 
     .hero {
@@ -1026,6 +1036,8 @@ a {
         justify-content: space-between;
         padding-left: 140px;
         padding-right: 140px;
+        max-width: 1200.87px;
+        margin: 0 auto;
     }
 
     .hero-title {
@@ -1047,7 +1059,93 @@ a {
         display: inline;
         padding: 20px 24px;
     }
+
+    .category{
+  
+      max-width: 1228px;
+      margin: 97px auto 0px auto;
+    }
+
+    .destinations{
+      max-width: 1102px;
+      margin: 123px auto 0px auto;
+    }
+
+    .img-card {
+      width: 315px;
+      height: 457px;
+  }
+
+  .img-des {
+    height: 331px;
 }
+
+.decore5{
+  right: -17%;
+  height: 50%;
+}
+
+    .booking{
+      max-width: 1114px;
+      margin: 186px auto 0px auto;
+    }
+
+    .booking-card{
+      width:485px;
+      height: 459px;
+      margin-left: auto;
+    }
+
+    .mobile-booking{
+      width: 130%;
+      right: -10%;
+    }
+
+    .testimonials{
+      max-width: 1085px;
+      margin: 200px auto 0px auto;
+    }
+
+    .testimonial-user{
+      top: -15px;
+    }
+   
+    .testimonials-card{
+      padding-top: 28px;
+      width: 504px;
+    }
+
+    .sponsors{
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+
+    .newsletter{
+      max-width: 1170px;
+      margin: 111px auto 0px auto;
+    }
+
+    .footer{
+      margin-top: 166px;
+    }
+
+    .footer-logo{
+      padding-top: 0;
+    }
+
+    .footer-contents{
+      max-width: 1060px;
+      display: flex;
+      margin: 0 auto;
+    }
+
+    .footer-flex{
+      margin-left: 83px;
+    }
+
+ 
+}
+
 /* desktop_end */
 
 /* other_media_queries */
