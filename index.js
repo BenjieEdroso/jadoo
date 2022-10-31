@@ -7,21 +7,21 @@ const testimonials = [
     name: "Mike Taylor",
     from: "Lahore, Pakistan",
     comment:
-      "On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no.",
+      '"On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no."',
   },
   {
-    profile_url: "./img/testi1.webp",
-    name: "John Smith",
+    profile_url: "./img/user2.webp",
+    name: "Mary Smith",
     from: "Sydney, Australia",
     comment:
-      "On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no.",
+      '"On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no."',
   },
   {
-    profile_url: "./img/testi1.webp",
+    profile_url: "./img/user3.webp",
     name: "Chris Thomas",
     from: "CEO of Red Button",
     comment:
-      "On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no.",
+      '"On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no."',
   },
 ];
 const numberOfTestimonials = testimonials.length - 1;
